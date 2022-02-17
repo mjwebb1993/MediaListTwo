@@ -255,39 +255,39 @@ function fetchDataByView(done, st = state.Home) {
         done();
       });
       break;
-    // case "Home":
-    //   state.Home.examples = [];
-    //   axios.get(`${process.env.MEDIA_API_URL}/listGames`).then(response => {
-    //     // console.log("response", response);
-    //     response.data.forEach(example => {
-    //       if (example.name == "Mass Effect") {
-    //         state.Home.examples.push(example);
-    //       }
-    //     });
-    //     // console.log(state.Home.examples);
-    //     done();
-    //   });
-    //   axios.get(`${process.env.MEDIA_API_URL}/listMovies`).then(response => {
-    //     // console.log("response", response);
-    //     response.data.forEach(example => {
-    //       if (example.name == "Endgame" || example.name == "Furious 7") {
-    //         state.Home.examples.push(example);
-    //       }
-    //     });
-    //     // console.log(state.Home.examples);
-    //     done();
-    //   });
-    //   axios.get(`${process.env.MEDIA_API_URL}/listBooks`).then(response => {
-    //     // console.log("response", response);
-    //     response.data.forEach(example => {
-    //       if (example.name == "The Last Samurai") {
-    //         state.Home.examples.push(example);
-    //       }
-    //     });
-    //     // console.log(state.Home.examples);
-    //     done();
-    //   });
-    //   break;
+    case "Home":
+      state.Home.examples = [];
+      axios.get(`${process.env.MEDIA_API_URL}/listGames`).then(response => {
+        // console.log("response", response);
+        response.data.forEach(example => {
+          if (example.name == "Mass Effect") {
+            state.Home.examples.push(example);
+          }
+        });
+        // console.log(state.Home.examples);
+        done();
+      });
+      axios.get(`${process.env.MEDIA_API_URL}/listMovies`).then(response => {
+        // console.log("response", response);
+        response.data.forEach(example => {
+          if (example.name == "Endgame" || example.name == "Furious 7") {
+            state.Home.examples.push(example);
+          }
+        });
+        // console.log(state.Home.examples);
+        done();
+      });
+      axios.get(`${process.env.MEDIA_API_URL}/listBooks`).then(response => {
+        // console.log("response", response);
+        response.data.forEach(example => {
+          if (example.name == "The Last Samurai") {
+            state.Home.examples.push(example);
+          }
+        });
+        // console.log(state.Home.examples);
+        done();
+      });
+      break;
     default:
       done();
   }

@@ -29,17 +29,17 @@ export default st => html`
 
     <div class="flex-child blue">
       <h4>See some of your favorites like Mass Effect, Endgame and even more!</h4>
-    
+      ${st.examples
+  .map(example => {
+    return formatGame(example);
+  })
+  .join("")}
   </div>
     </div>
   </div>
 </section>
 `;
-// ${st.examples
-//   .map(example => {
-//     return formatGame(example);
-//   })
-//   .join("")}
+
 function formatGame(example) {
   return `
     <img src=${example.picUrl} width="100" height="100">
