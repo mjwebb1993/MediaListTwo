@@ -12,9 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "browserslist": [
-    "since 2017-06"
-  ],
+
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.15.0",
