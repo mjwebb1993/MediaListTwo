@@ -1,0 +1,35 @@
+{
+  "name": "savvy-starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "parcel-build": "parcel build index.html && cp _redirects ./dist/",
+    "serve": "parcel index.html",
+    "spa:watch": "parcel index.html",
+    "server:watch": "nodemon --watch ./server -e js ./server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "since 2017-06"
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "1.19.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.17.1",
+    "html-literal": "^1.1.0",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.8",
+    "navigo": "^8.1.2",
+    "parcel": "^2.0.1"
+  }
+}
