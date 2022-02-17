@@ -1,4 +1,7 @@
-export default () => `
-<footer>
-    &copy; 2021 <a href="https://savvycoders.com/">Savvy Coders</a>
-</footer>`;
+import html from "html-literal";
+
+export default () => html`
+  <footer>
+    &copy; Webby 2021
+  </footer>
+`;

@@ -1,4 +1,10 @@
+/* eslint-disable prettier/prettier */
+import html from "html-literal";
+
 import * as views from "./views";
 
-export default st => `
-<div id="main">${views[st.view](st)}</div>`;
+export default st => html`
+${views[st.view](st)}
+
+`;
+// ${views["UserHome"]()}
