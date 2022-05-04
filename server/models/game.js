@@ -8,7 +8,7 @@ const gameSchema = new mongoose.Schema({
   picUrl: String
 });
 
-const Movie = mongoose.model("Game", gameSchema);
+const Game = mongoose.model("Game", gameSchema);
 
 module.exports = {
   model: Game,
