@@ -269,17 +269,29 @@ nav > .fa-bars {
   nav > ul {
     display: flex;
     justify-content: space-evenly;
-    padding: 0 0;
+    /* padding: 0 0; */
   }
 
   nav > ul > li {
     display: inline-block;
     text-decoration: none;
-    border: 1px solid;
-    padding: .5rem .5rem;
-    border-radius: 25px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: auto;
+    text-decoration: 0;
+    padding: 10px;
+    margin-top: .5em;
+    margin-bottom: 10px;
   }
-
+  li:hover {
+    background: var(--darkerGreen);
+    text-shadow: #0a9396 5px 0 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
   nav > .fa-bars {
     display: none;
   }
@@ -324,11 +336,7 @@ nav > .fa-bars {
 .flex-child:nth-child(2) > img {
   margin: 10px;
 }
-@media (min-width: 550px) {
-  nav > .fa-bars {
-    display: none;
-  }
-}
+
 #media-page {
   text-align: center;
   text-decoration:none;
