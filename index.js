@@ -196,7 +196,7 @@ function fetchDataByView(done, st = state.Home) {
   switch (st.view) {
     case "Media":
       // axios.get("https://medialistapi.herokuapp.com/listMedia").then(
-      axios.get(`${process.env.MEDIA_API_URL}/listMedia`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/lists`).then(response => {
         // console.log("response", response);
         state.Media.lists = [];
         state.Media.lists.games = response.data.Games;
@@ -213,7 +213,7 @@ function fetchDataByView(done, st = state.Home) {
       break;
     case "Game":
       state.Game.games = [];
-      axios.get(`${process.env.MEDIA_API_URL}/listGames`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/games`).then(response => {
         response.data.forEach(game => {
           state.Game.games.push(game);
         });
@@ -222,7 +222,7 @@ function fetchDataByView(done, st = state.Home) {
       break;
     case "Book":
       state.Book.books = [];
-      axios.get(`${process.env.MEDIA_API_URL}/listBooks`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/books`).then(response => {
         response.data.forEach(book => {
           state.Book.books.push(book);
           console.log("Books", state.Book.books);
@@ -232,7 +232,7 @@ function fetchDataByView(done, st = state.Home) {
       break;
     case "Movie":
       state.Movie.movies = [];
-      axios.get(`${process.env.MEDIA_API_URL}/listMovies`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/movies`).then(response => {
         response.data.forEach(movie => {
           state.Movie.movies.push(movie);
         });
@@ -241,7 +241,7 @@ function fetchDataByView(done, st = state.Home) {
       break;
     case "User":
       // axios.get("https://medialistapi.herokuapp.com/listMedia").then(
-      axios.get(`${process.env.MEDIA_API_URL}/listMedia`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/lists`).then(response => {
         state.User.users = [];
         state.User.users.games = response.data.Games;
         state.User.users.books = response.data.Books;
@@ -257,7 +257,7 @@ function fetchDataByView(done, st = state.Home) {
       break;
     case "Home":
       state.Home.examples = [];
-      axios.get(`${process.env.MEDIA_API_URL}/listGames`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/games`).then(response => {
         // console.log("response", response);
         response.data.forEach(example => {
           if (example.name == "Mass Effect") {
@@ -267,7 +267,7 @@ function fetchDataByView(done, st = state.Home) {
         // console.log(state.Home.examples);
         done();
       });
-      axios.get(`${process.env.MEDIA_API_URL}/listMovies`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/movies`).then(response => {
         // console.log("response", response);
         response.data.forEach(example => {
           if (example.name == "Endgame" || example.name == "Furious 7") {
@@ -277,7 +277,7 @@ function fetchDataByView(done, st = state.Home) {
         // console.log(state.Home.examples);
         done();
       });
-      axios.get(`${process.env.MEDIA_API_URL}/listBooks`).then(response => {
+      axios.get(`${process.env.MEDIA_API_URL}/books`).then(response => {
         // console.log("response", response);
         response.data.forEach(example => {
           if (example.name == "The Last Samurai") {
